@@ -1,0 +1,45 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: company-customer
+  #devtools:
+   # restart:
+    #  enabled: true  #打开热部署 
+    
+eureka:
+  instance:
+    hostname: customer 
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}:@project.version@
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserver1:9000/eureka/,http://eurekaserver1:9001/eureka/
+
+#company-provider: # 服务名称 
+  #ribbon:
+    #NFLoadBalancerRuleClassName:  com.netflix.loadbalancer.RandomRule 
+#feign的日志    
+logging:
+  level:
+    com.bp.company.customer.feignclient.CompanyFeignClient: debug
+
+#断路器  不加这个好像也可以哦
+feign:
+  hystrix:
+    enabled: true
+    
+#解决第一次启动时报超时，我们把时间设置长些
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ReadTimeout:  5000
+  ConnectTimeout:  5000
+env:
+  test
