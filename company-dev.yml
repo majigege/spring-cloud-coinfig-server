@@ -50,7 +50,7 @@ ribbon:
   ReadTimeout:  5000
   ConnectTimeout:  5000
 env:
-  dev1
+  dev2
   
             
             
