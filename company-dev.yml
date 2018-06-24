@@ -9,6 +9,14 @@ spring:
     username: root
     password: newpassword
     url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf-8
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5671
+    username: lee
+    password: 123456
+management:
+  security:
+    enabled: false 
   #devtools:
    # restart:
     #  enabled: true  #打开热部署 
