@@ -14,9 +14,9 @@ spring:
     #port: 5671
     #username: lee
     #password: 123456
-#management:
-  #security:
-    #enabled: false 
+management:
+  security:
+    enabled: false 
   #devtools:
    # restart:
     #  enabled: true  #打开热部署 
