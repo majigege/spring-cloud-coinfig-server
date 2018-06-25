@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: company-customer
+    name: company
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
