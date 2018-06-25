@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8000
 
 spring:
   application:
@@ -57,7 +57,7 @@ ribbon:
   ReadTimeout:  5000
   ConnectTimeout:  5000
 env:
-  dev3
+  dev4
   
             
             
