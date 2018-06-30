@@ -2,7 +2,7 @@ server:
   port: 7000
 spring:
   application:
-    name: zuul-config 
+    name: zuul_config 
 eureka:
   instance:
     hostname: 192.168.0.101
