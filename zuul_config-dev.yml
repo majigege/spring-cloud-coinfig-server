@@ -1,0 +1,23 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: zuul-config 
+eureka:
+  instance:
+    hostname: 192.168.0.101
+    prefer-ip-address: true #是否显示IP地址
+    instance-id: ${spring.application.name}:${server.port} #更改显示的实列名
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserver1:9000/eureka/
+zuul: #自动以的zuul路由
+  routes:
+    myroute:   
+      path: /mycompany/**  #访问服务的时候使用这个路由
+      service-id: company #访问的哪个服务
+      sensitive-headers:  #设置敏感头为空  cookie可以获取到
+        
+management: #关闭权限认证
+  security:
+    enabled: false
