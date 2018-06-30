@@ -11,12 +11,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eurekaserver1:9000/eureka/
-zuul: #自动以的zuul路由
+zuul: #自定义的zuul路由
   routes:
-    myroute:   
-      path: /mycompany/**  #访问服务的时候使用这个路由
-      service-id: company #访问的哪个服务
-      sensitive-headers:  #设置敏感头为空  cookie可以获取到
+    company:  /mycompany/**  #指定哪个微服务的ID，可以访问的路径   mycompany/服务的某个URL
+    sensitive-headers:  #设置敏感头为空  cookie可以获取到
         
 management: #关闭权限认证
   security:
