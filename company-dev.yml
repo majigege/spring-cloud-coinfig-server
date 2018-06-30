@@ -57,7 +57,7 @@ ribbon:
   ReadTimeout:  5000
   ConnectTimeout:  5000
 env:
-  dev7
+  dev8
   
             
             
