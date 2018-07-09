@@ -15,6 +15,9 @@ spring:
       max-wait: 30000 #以毫秒表示的当连接池中没有可用连接时等待可用连接返回的时间，超时则抛出异常，值为-1时无限期等待。
       max-idle: 500  #池中允许的最大连接数，值为非正数时表示不限制
       min-idle: 50 #池
+management:
+  security:
+    enabled: false
  
 eureka:
   instance:
