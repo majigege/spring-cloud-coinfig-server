@@ -19,10 +19,10 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.application.name}:${server.port}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
     serviceUrl:
-      defaultZone: http://lee1:123456@eurekaserver1:8000/eureka/
+      defaultZone: http://eurekaserver1:8000/eureka/
 mybatis:
   type-aliases-package: com.ss.microuser.pojo
   configuration:
