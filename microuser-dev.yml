@@ -28,4 +28,4 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true   #开启驼峰命名，例如:表的字段名是book_name,那么pojo的字段名就是bookName
 env:
-  dev
+  dev8
