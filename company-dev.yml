@@ -30,7 +30,7 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}:@project.version@
   client:
     serviceUrl:
-      defaultZone: http://eurekaserver1:9000/eureka/
+      defaultZone: http://eurekaserver1:8000/eureka/
 
 #company-provider: # 服务名称 
   #ribbon:
