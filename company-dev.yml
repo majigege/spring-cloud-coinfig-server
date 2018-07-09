@@ -7,8 +7,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: newpassword
-    url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf-8
+    password: root
+    url: jdbc:mysql://192.168.10.200:3306/cloud?characterEncoding=utf-8
   rabbitmq:
     host: 192.168.10.200
     port: 5672
