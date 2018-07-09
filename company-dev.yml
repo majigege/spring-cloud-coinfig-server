@@ -10,7 +10,7 @@ spring:
     password: newpassword
     url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf-8
   rabbitmq:
-    host: 192.168.0.101
+    host: 192.168.10.200
     port: 5672
     username: lee
     password: 123456
