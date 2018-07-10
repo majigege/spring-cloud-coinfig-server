@@ -27,7 +27,7 @@ eureka:
     serviceUrl:
       defaultZone: http://eurekaserver1:8000/eureka/
 mybatis:
-  type-aliases-package: com.ss.microuser.pojo
+  type-aliases-package: com.ss.microorder.pojo
   configuration:
     map-underscore-to-camel-case: true   #开启驼峰命名，例如:表的字段名是book_name,那么pojo的字段名就是bookName
 env:
