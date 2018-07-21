@@ -5,12 +5,12 @@ spring:
     name: zuulConfig 
 eureka:
   instance:
-    hostname: 192.168.0.101
+    hostname: 192.168.0.100
     prefer-ip-address: true #是否显示IP地址
     instance-id: ${spring.application.name}:${server.port} #更改显示的实列名
   client:
     serviceUrl:
-      defaultZone: http://eurekaserver1:9000/eureka/
+      defaultZone: http://eurekaserver1:9000/eureka/,http://eurekaserver2:9001/eureka/
 zuul: #自定义的zuul路由
   routes:
     company:  /mycompany/**  #指定哪个微服务的ID，可以访问的路径   mycompany/服务的某个URL
