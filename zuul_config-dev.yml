@@ -13,7 +13,7 @@ eureka:
       defaultZone: http://eurekaserver1:9000/eureka/,http://eurekaserver2:9001/eureka/
 zuul: #自定义的zuul路由
   routes:
-    company:  /mycompany/**  #指定哪个微服务的ID，可以访问的路径   mycompany/服务的某个URL
+    company:  /mycompany/**    #指定哪个微服务的ID，可以访问的路径   mycompany/服务的某个URL
     sensitive-headers:  #设置敏感头为空  cookie可以获取到
         
 management: #关闭权限认证
