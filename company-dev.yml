@@ -8,9 +8,9 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://192.168.10.200:3306/cloud?characterEncoding=utf-8
+    url: jdbc:mysql://192.168.0.100:3306/cloud?characterEncoding=utf-8
   rabbitmq:
-    host: 192.168.10.200
+    host: 192.168.0.100
     port: 5672
     username: lee
     password: 123456
@@ -30,7 +30,7 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}:@project.version@
   client:
     serviceUrl:
-      defaultZone: http://eurekaserver1:8000/eureka/
+      defaultZone: http://eurekaserver1:9000/eureka/,http://eurekaserver2:9001/eureka/
 
 #company-provider: # 服务名称 
   #ribbon:
